@@ -1,3 +1,7 @@
 # js8446
 
-this is a first text to demonistrate hit file edit
+ text to demonistrate hit file edit
+ 
+ second line addd to readme.
+ 
+ 

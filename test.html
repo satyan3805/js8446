@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<br>
+	<script>
+		var e = document.getElementById("test");
+		console.log(e);
+	</script>
+
+	<input type="text" id = "num1" value="45"/>
+	<select id="operator">
+		<option value="+">Additon</option>
+		<option value="-" selected>-</option>
+		<option>/</option>
+		<option>*</option>
+	</select>
+	<input type="number" id="num2" value="45"/></br>
+	<button id="add" onclick="calc(event)" onblur="calc(event)">add</button>
+	<button id="sub" onclick="calc(event)" onblur="calc(event)">sub</button>
+	<button id="mul" onclick="calc(event)" onblur="calc(event)">mul</button>
+	<button id="div" onclick="calc(event)" onblur="calc(event)">div</button>
+
+	<input type="text" id="t1" oninput="testChange(1,5);"/></br>
+
+	<script>
+		var num1 = Number(document.getElementById("num1").value);
+		var num2 = document.getElementById("num2").value;
+		var operator = document.getElementById("operator").value;
+		console.log("operator: "+operator);
+		var result = num1+ num2;
+		console.log("RESUT IS: "+result);
+
+		function calc(){
+			console.log(event.target);
+			console.log(event.type);
+			if(event.target.id == 'add'){
+
+			}
+		}
+
+		function testChange(a,b,c){
+			console.log(a + "::" + b);
+			console.log("testChange");
+		}
+
+		
+
+	</script>
+
+</body>
+</html>
