@@ -1,0 +1,33 @@
+java
+basics:	>data types
+		>Classes and objects
+		>OOPS concepts	--> Abstraction, Inheritence, Encapulation, 
+		>Strings
+		>Interfaces
+		>Exceptions
+		>Threads
+		>Collections
+		>Files
+		>JDBC
+
+adv:	>servlets
+		>jsp
+
+Frameworks:
+		> Hibernate
+		>Spring
+		>springboot
+
+SQL:Mysql
+		
+
+js
+basics:
+adv:	> array ES6 standards
+		> ES6 arrow functions
+		> ES6 functions
+		> ajax calls
+		> html element creation in js
+		
+React
+		> 
