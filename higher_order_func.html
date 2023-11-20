@@ -67,4 +67,23 @@ Ex:
 
   console.log(radiusArr.reduce(maxOfArr,0));
 
+  const users = [
+    {fistname:"sat", lastname:"nav", age:40},
+    {fistname:"rat", lastname:"nav", age:30},
+    {fistname:"bat", lastname:"nav", age:40},
+    {fistname:"cat", lastname:"nav", age:50},
+    {fistname:"mat", lastname:"nav", age:30},
+  ];
+
+  function groupByAgeFunc(res,curr){
+    if(res[curr.age]){
+      res[curr.age] = ++res[curr.age];
+    }else{
+      res[curr.age]= 1;
+    }
+    return res;
+  }
+const groupByAge = users.reduce(groupByAgeFunc,{});
+console.log(groupByAge);
+
 </script>
