@@ -1,0 +1,70 @@
+Higher Order Functions: its a function which take another function as parameter.
+Ex:
+<script>
+  const radiusArr = [1, 6, 3, 5, 8];
+
+  function area(r) {
+    return Math.PI * r * r;
+  };
+
+  calculate = function (arr, func) {
+    const result = [];
+    for (let i = 0; i < arr.length; i++) {
+      result.push(func(arr[i]));
+    }
+    return result;
+  };
+
+  //polyfill format
+  Array.prototype.calci = function(func) {
+    const result = [];
+    for (let i = 0; i < this.length; i++) {
+      result.push(func(this[i]));
+    }
+    return result;
+  };
+
+  console.log(calculate(radiusArr, area));
+  console.log(radiusArr.calci(area));
+  console.log(radiusArr.map(area));
+
+  function doubleVal(x){
+	return x*2;
+  }
+
+  console.log(radiusArr.map(function double(x){ return (x*2)}));
+  console.log(radiusArr.map(doubleVal));
+
+  function isEven(x){
+	return x%2 ===0;
+  }
+
+  console.log(radiusArr.filter(isEven));
+
+  console.log(radiusArr.filter(function isOdd(x){return (x%2 != 0)}));
+
+  function getSumOfArr(arr){
+	sum =0;
+	for(let i=0;i<arr.length;i++){
+		sum = arr[i]+ sum;
+	}
+	return sum;
+  }
+
+  function sumOfArr(res, curr){
+	res = res + curr;
+	return res;
+  }
+
+  console.log(radiusArr.reduce(sumOfArr));
+
+  function maxOfArr(res, curr){
+	if(curr > res){
+		res = curr;
+	}
+	return res;
+  }
+
+  console.log(radiusArr.reduce(maxOfArr,0));
+
+</script>
